@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment | Sweetness Spa & Wellness</title>
+<meta name="description" content="Book your appointment at Sweetness Spa & Wellness. Choose a service, pick a date and time, and we'll confirm with you on WhatsApp.">
+<link rel="canonical" href="https://www.sweetnessspa.com/booking.html">
+
+<!-- REPLACE: favicon.ico -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+  <span class="preloader-mark">S</span>
+</div>
+
+<!-- ================= HEADER / NAV ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <!-- REPLACE: logo.png -->
+      <img src="img/WhatsApp_Image_2026-09-09_at_16.19.24-removebg-preview.png" alt="Sweetness Spa & Wellness logo" class="brand-logo">
+      <span class="brand-name">Sweetness<em>Spa</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn-gold nav-cta">Book Appointment</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero small">
+    <div class="page-hero-media">
+      <!-- REPLACE: booking-hero.jpg -->
+      <img src="images/about-hero.svg" alt="Sweetness Spa booking">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-content">
+      <p class="eyebrow">Book an Appointment</p>
+      <h1>Pick a service. Pick a time. We'll do the rest.</h1>
+    </div>
+  </section>
+
+  <!-- ================= BOOKING SECTION ================= -->
+  <section class="section booking-section">
+    <div class="container booking-grid">
+
+      <!-- ---- FORM CARD ---- -->
+      <div class="booking-card">
+
+        <form id="bookingForm" class="booking-form" novalidate>
+
+          <div class="form-row">
+            <label for="service">Service <span class="req">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <optgroup label="Facials">
+                <option>Signature Radiance Facial &mdash; &#8358;25,000</option>
+                <option>Hydrating Glow Facial &mdash; &#8358;20,000</option>
+                <option>Anti-Aging Facial &mdash; &#8358;32,000</option>
+                <option>Express Facial &mdash; &#8358;13,000</option>
+              </optgroup>
+              <optgroup label="Massages">
+                <option>Deep Tissue Massage &mdash; &#8358;30,000</option>
+                <option>Swedish Relaxation Massage &mdash; &#8358;26,000</option>
+                <option>Hot Stone Massage &mdash; &#8358;35,000</option>
+                <option>Aromatherapy Massage &mdash; &#8358;28,000</option>
+              </optgroup>
+              <optgroup label="Body Treatments">
+                <option>Body Contouring Ritual &mdash; &#8358;45,000</option>
+                <option>Detox Body Wrap &mdash; &#8358;33,000</option>
+                <option>Exfoliating Salt Scrub &mdash; &#8358;22,000</option>
+              </optgroup>
+              <optgroup label="Manicure & Pedicure">
+                <option>Classic Manicure &amp; Pedicure &mdash; &#8358;18,000</option>
+                <option>Gel Manicure &mdash; &#8358;15,000</option>
+                <option>Luxury Spa Pedicure &mdash; &#8358;20,000</option>
+              </optgroup>
+              <optgroup label="Hair & Beauty">
+                <option>Blow Dry &amp; Style &mdash; &#8358;12,000</option>
+                <option>Makeup Application &mdash; &#8358;20,000</option>
+              </optgroup>
+              <optgroup label="Wellness">
+                <option>Reflexology &mdash; &#8358;16,000</option>
+                <option>Steam Room Session &mdash; &#8358;7,000</option>
+                <option>Couples Massage Package &mdash; &#8358;55,000</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label for="date">Preferred Date <span class="req">*</span></label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+              <label for="time">Preferred Time <span class="req">*</span></label>
+              <select id="time" name="time" required>
+                <option value="" disabled selected>Select a time</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="name">Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="e.g. Amina Yusuf" required>
+          </div>
+
+          <div class="form-row">
+            <label for="location">Home or Hotel Address <span class="req">*</span></label>
+            <input type="text" id="location" name="location" placeholder="e.g. Hotel name & room number, or home address in Abuja" required>
+          </div>
+
+          <div class="form-row two-col">
+            <div>
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 0801 234 5678" required>
+            </div>
+            <div>
+              <label for="email">Email <span class="optional">(optional)</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="notes">Additional Notes <span class="optional">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Allergies, preferences, or anything else we should know"></textarea>
+          </div>
+
+          <!--
+            NOTE FOR DEVELOPER (no backend in this build):
+            On submit, this form builds a formatted message from the fields above
+            and opens WhatsApp with it pre-filled via wa.me, so requests reach the
+            spa immediately without a server. To connect a real booking backend or
+            database later, replace the submit handler in js/main.js (see the
+            "BOOKING FORM SUBMISSION" section) with an API call, keeping the same
+            field names and the confirmation UI below.
+          -->
+
+          <button type="submit" class="btn btn-gold btn-block submit-btn">Book Now</button>
+          <p class="form-note">You'll be redirected to WhatsApp to confirm your request with us.</p>
+        </form>
+
+        <!-- ---- CONFIRMATION STATE (hidden until submit) ---- -->
+        <div class="booking-confirmation" id="bookingConfirmation" hidden>
+          <svg class="confirm-check" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="confirm-circle" cx="32" cy="32" r="29"/>
+            <path class="confirm-tick" d="M19 33 L28 42 L46 22"/>
+          </svg>
+          <h3>Request ready!</h3>
+          <p>We've put together your appointment request. Continue in WhatsApp to send it to us and get confirmed.</p>
+          <a href="#" id="confirmWhatsappLink" class="btn btn-gold" target="_blank" rel="noopener">Continue on WhatsApp</a>
+          <button type="button" class="text-link reset-form" id="resetForm">Book another appointment</button>
+        </div>
+
+      </div>
+
+      <!-- ---- SIDE INFO ---- -->
+      <aside class="booking-aside">
+        <div class="aside-block">
+          <h3>What happens next</h3>
+          <ol class="steps-list">
+            <li><span>1</span>Submit your preferred service, date, time and address (home or hotel).</li>
+            <li><span>2</span>We confirm availability with you on WhatsApp, usually within the hour.</li>
+            <li><span>3</span>We arrive, set up, and let the calm take over.</li>
+          </ol>
+        </div>
+
+        <div class="aside-block">
+          <h3>Prefer to talk first?</h3>
+          <p>Send us a message directly and we'll help you choose the right treatment.</p>
+          <a href="#" class="btn btn-outline btn-block whatsapp-cta" id="asideWhatsapp">
+            <svg viewBox="0 0 32 32" class="icon-wa" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.9c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.1 10.1 0 0 1-1.6-5.4C5.4 9.9 10.1 5.3 16 5.3c5.9 0 10.6 4.6 10.6 10.2S21.9 25.6 16 25.6zm5.8-7.6c-.3-.1-1.9-.9-2.2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1a8.3 8.3 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c-.1-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4A3.6 3.6 0 0 0 9.4 13c0 1.7 1.3 3.4 1.5 3.6s2.5 3.8 6 5.2c3.6 1.4 3.6.9 4.2.9s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="aside-block">
+          <h3>Service Hours</h3>
+          <!-- REPLACE: actual service hours -->
+          <ul class="hours-list">
+            <li><span>Tue &ndash; Fri</span><span>9:00 AM &ndash; 7:00 PM</span></li>
+            <li><span>Sat &ndash; Sun</span><span>10:00 AM &ndash; 6:00 PM</span></li>
+            <li><span>Monday</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <!-- REPLACE: logo.png (light version if needed) -->
+      <img src="img/WhatsApp_Image_2026-09-09_at_16.19.24-removebg-preview.png" alt="Sweetness Spa & Wellness logo" class="brand-logo">
+      <span class="brand-name">Sweetness<em>Spa</em></span>
+      <p>A mobile spa &amp; wellness service for homes and hotels across Abuja.</p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book an Appointment</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <!-- REPLACE: actual address -->
+      <a href="contact.html">Mobile service across Abuja</a>
+      <!-- REPLACE: actual phone number -->
+      <a href="tel:+2349014213875">+234 901 421 3875</a>
+      <!-- REPLACE: actual email -->
+      <a href="mailto:hello@sweetnessspa.com">hello@sweetnessspa.com</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Follow</h5>
+      <div class="social-row">
+        <!-- REPLACE: real social links -->
+        <a href="https://www.instagram.com/choco68290" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/share/1FDZrERVQa/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>&copy; <span id="year"></span> Sweetness Spa &amp; Wellness. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#" class="whatsapp-float" id="floatWhatsapp" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.9c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.1 10.1 0 0 1-1.6-5.4C5.4 9.9 10.1 5.3 16 5.3c5.9 0 10.6 4.6 10.6 10.2S21.9 25.6 16 25.6zm5.8-7.6c-.3-.1-1.9-.9-2.2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1a8.3 8.3 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c-.1-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4A3.6 3.6 0 0 0 9.4 13c0 1.7 1.3 3.4 1.5 3.6s2.5 3.8 6 5.2c3.6 1.4 3.6.9 4.2.9s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

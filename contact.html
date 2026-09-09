@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Sweetness Spa & Wellness</title>
+<meta name="description" content="Get in touch with Sweetness Spa & Wellness, a mobile spa serving homes and hotels across Abuja. Phone, WhatsApp, and service hours.">
+<link rel="canonical" href="https://www.sweetnessspa.com/contact.html">
+
+<!-- REPLACE: favicon.ico -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+  <span class="preloader-mark">S</span>
+</div>
+
+<!-- ================= HEADER / NAV ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <!-- REPLACE: logo.png -->
+      <img src="img/WhatsApp_Image_2026-09-09_at_16.19.24-removebg-preview.png" alt="Sweetness Spa & Wellness logo" class="brand-logo">
+      <span class="brand-name">Sweetness<em>Spa</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="booking.html" class="btn btn-gold nav-cta">Book Appointment</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero small">
+    <div class="page-hero-media">
+      <!-- REPLACE: contact-hero.jpg -->
+      <img src="img/signature_radiance.webp" alt="Contact Sweetness Spa">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-content">
+      <p class="eyebrow">Contact Us</p>
+      <h1>We'd love to hear from you.</h1>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="section booking-section">
+    <div class="container booking-grid">
+
+      <!-- ---- FORM CARD ---- -->
+      <div class="booking-card">
+
+        <form id="contactForm" class="booking-form" novalidate>
+
+          <div class="form-row two-col">
+            <div>
+              <label for="cName">Full Name <span class="req">*</span></label>
+              <input type="text" id="cName" name="name" placeholder="e.g. Amina Yusuf" required>
+            </div>
+            <div>
+              <label for="cPhone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="cPhone" name="phone" placeholder="e.g. 0801 234 5678" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="cEmail">Email <span class="optional">(optional)</span></label>
+            <input type="email" id="cEmail" name="email" placeholder="you@example.com">
+          </div>
+
+          <div class="form-row">
+            <label for="cSubject">Subject</label>
+            <select id="cSubject" name="subject">
+              <option>General Enquiry</option>
+              <option>Booking Question</option>
+              <option>Pricing &amp; Packages</option>
+              <option>Feedback</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="cMessage">Message <span class="req">*</span></label>
+            <textarea id="cMessage" name="message" rows="5" placeholder="How can we help?" required></textarea>
+          </div>
+
+          <!--
+            NOTE FOR DEVELOPER (no backend in this build):
+            On submit, this form builds a formatted message and opens
+            WhatsApp with it pre-filled via wa.me — same pattern as the
+            booking form. To connect a real contact-form backend or
+            mailer later, replace the submit handler in js/main.js (see
+            "CONTACT FORM SUBMISSION"), keeping the same field names.
+          -->
+
+          <button type="submit" class="btn btn-gold btn-block submit-btn">Send Message</button>
+          <p class="form-note">You'll be redirected to WhatsApp to send this to us directly.</p>
+        </form>
+
+        <!-- ---- CONFIRMATION STATE (hidden until submit) ---- -->
+        <div class="booking-confirmation" id="contactConfirmation" hidden>
+          <svg class="confirm-check" viewBox="0 0 64 64" aria-hidden="true">
+            <circle class="confirm-circle" cx="32" cy="32" r="29"/>
+            <path class="confirm-tick" d="M19 33 L28 42 L46 22"/>
+          </svg>
+          <h3>Message ready!</h3>
+          <p>We've put your message together. Continue in WhatsApp to send it to us directly.</p>
+          <a href="#" id="contactWhatsappLink" class="btn btn-gold" target="_blank" rel="noopener">Continue on WhatsApp</a>
+          <button type="button" class="text-link reset-form" id="resetContactForm">Send another message</button>
+        </div>
+
+      </div>
+
+      <!-- ---- CONTACT DETAILS ---- -->
+      <aside class="booking-aside">
+        <div class="aside-block">
+          <h3>Get in touch</h3>
+          <ul class="contact-info-list">
+            <li>
+              <svg viewBox="0 0 24 24" class="icon"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+              <span>Mobile spa &mdash; we come to your home or hotel, anywhere in Abuja</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" class="icon"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+              <a href="tel:+2349014213875">+234 901 421 3875</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" class="icon"><path d="M2 4h20v16H2V4zm2 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-8 6-8-6V18h16z"/></svg>
+              <!-- REPLACE: actual email address -->
+              <a href="mailto:hello@sweetnessspa.com">hello@sweetnessspa.com</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block whatsapp-cta" id="asideWhatsapp">
+            <svg viewBox="0 0 32 32" class="icon-wa" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.9c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.1 10.1 0 0 1-1.6-5.4C5.4 9.9 10.1 5.3 16 5.3c5.9 0 10.6 4.6 10.6 10.2S21.9 25.6 16 25.6zm5.8-7.6c-.3-.1-1.9-.9-2.2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1a8.3 8.3 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c-.1-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4A3.6 3.6 0 0 0 9.4 13c0 1.7 1.3 3.4 1.5 3.6s2.5 3.8 6 5.2c3.6 1.4 3.6.9 4.2.9s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="aside-block">
+          <h3>Service Hours</h3>
+          <!-- REPLACE: actual service hours -->
+          <ul class="hours-list">
+            <li><span>Mon &ndash; Fri</span><span>9:00 AM &ndash; 7:00 PM</span></li>
+            <li><span>Sat</span><span>10:00 AM &ndash; 6:00 PM</span></li>
+            <li><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+
+        <div class="aside-block">
+          <h3>Follow Us</h3>
+          <div class="social-row social-row-dark">
+            <a href="https://www.instagram.com/choco68290" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/share/1FDZrERVQa/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Ready when you are.</h2>
+      <p>Book an appointment or drop by — either way, we're glad to have you.</p>
+      <div class="hero-actions">
+        <a href="booking.html" class="btn btn-gold">Book an Appointment</a>
+        <a href="#" class="btn btn-outline-light whatsapp-cta" id="ctaWhatsapp">
+          <svg viewBox="0 0 32 32" class="icon-wa" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.9c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.1 10.1 0 0 1-1.6-5.4C5.4 9.9 10.1 5.3 16 5.3c5.9 0 10.6 4.6 10.6 10.2S21.9 25.6 16 25.6zm5.8-7.6c-.3-.1-1.9-.9-2.2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1a8.3 8.3 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c-.1-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4A3.6 3.6 0 0 0 9.4 13c0 1.7 1.3 3.4 1.5 3.6s2.5 3.8 6 5.2c3.6 1.4 3.6.9 4.2.9s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <!-- REPLACE: logo.png (light version if needed) -->
+      <img src="img/WhatsApp_Image_2026-09-09_at_16.19.24-removebg-preview.png" alt="Sweetness Spa & Wellness logo" class="brand-logo">
+      <span class="brand-name">Sweetness<em>Spa</em></span>
+      <p>A mobile spa &amp; wellness service for homes and hotels across Abuja.</p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book an Appointment</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <!-- REPLACE: actual address -->
+      <a href="contact.html">Mobile service across Abuja</a>
+      <!-- REPLACE: actual phone number -->
+      <a href="tel:+2349014213875">+234 901 421 3875</a>
+      <!-- REPLACE: actual email -->
+      <a href="mailto:hello@sweetnessspa.com">hello@sweetnessspa.com</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Follow</h5>
+      <div class="social-row">
+        <!-- REPLACE: real social links -->
+        <a href="https://www.instagram.com/choco68290" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/share/1FDZrERVQa/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>&copy; <span id="year"></span> Sweetness Spa &amp; Wellness. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#" class="whatsapp-float" id="floatWhatsapp" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.9c1.9 1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.1 10.1 0 0 1-1.6-5.4C5.4 9.9 10.1 5.3 16 5.3c5.9 0 10.6 4.6 10.6 10.2S21.9 25.6 16 25.6zm5.8-7.6c-.3-.1-1.9-.9-2.2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1a8.3 8.3 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c-.1-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4A3.6 3.6 0 0 0 9.4 13c0 1.7 1.3 3.4 1.5 3.6s2.5 3.8 6 5.2c3.6 1.4 3.6.9 4.2.9s2.1-.8 2.4-1.6.3-1.5.2-1.6-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
