@@ -405,6 +405,7 @@ h2::before{
   margin-bottom:14px;
 }
 .service-row-foot{ display:flex; align-items:center; gap:26px; }
+.service-row-foot .duration{ font-family:var(--font-body); font-size:.92rem; font-weight:500; color:var(--gold); }
 .price{ font-family:var(--font-display); font-size:1.15rem; color:var(--gold); }
 .price small{ font-family:var(--font-body); font-size:.8rem; color:var(--charcoal-soft); }
 

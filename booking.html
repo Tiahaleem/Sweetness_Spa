@@ -78,35 +78,36 @@
             <select id="service" name="service" required>
               <option value="" disabled selected>Select a service</option>
               <optgroup label="Facials">
-                <option>Signature Radiance Facial &mdash; &#8358;25,000</option>
-                <option>Hydrating Glow Facial &mdash; &#8358;20,000</option>
-                <option>Anti-Aging Facial &mdash; &#8358;32,000</option>
-                <option>Express Facial &mdash; &#8358;13,000</option>
+                <option>Signature Radiance Facial</option>
+                <option>Hydrating Glow Facial</option>
+                <option>Anti-Aging Facial</option>
+                <option>Express Facial</option>
               </optgroup>
               <optgroup label="Massages">
-                <option>Deep Tissue Massage &mdash; &#8358;30,000</option>
-                <option>Swedish Relaxation Massage &mdash; &#8358;26,000</option>
-                <option>Hot Stone Massage &mdash; &#8358;35,000</option>
-                <option>Aromatherapy Massage &mdash; &#8358;28,000</option>
+                <option>Deep Tissue Massage</option>
+                <option>Swedish Relaxation Massage</option>
+                <option>Hot Stone Massage</option>
+                <option>Aromatherapy Massage</option>
+                <option>Four Hands Massage</option>
+                <option>Sports Massage</option>
               </optgroup>
               <optgroup label="Body Treatments">
-                <option>Body Contouring Ritual &mdash; &#8358;45,000</option>
-                <option>Detox Body Wrap &mdash; &#8358;33,000</option>
-                <option>Exfoliating Salt Scrub &mdash; &#8358;22,000</option>
+                <option>Body Contouring Ritual</option>
+                <option>Detox Body Wrap</option>
+                <option>Exfoliating Salt Scrub</option>
               </optgroup>
               <optgroup label="Manicure & Pedicure">
-                <option>Classic Manicure &amp; Pedicure &mdash; &#8358;18,000</option>
-                <option>Gel Manicure &mdash; &#8358;15,000</option>
-                <option>Luxury Spa Pedicure &mdash; &#8358;20,000</option>
+                <option>Classic Manicure &amp; Pedicure</option>
+                <option>Gel Manicure</option>
+                <option>Luxury Spa Pedicure</option>
               </optgroup>
               <optgroup label="Hair & Beauty">
-                <option>Blow Dry &amp; Style &mdash; &#8358;12,000</option>
-                <option>Makeup Application &mdash; &#8358;20,000</option>
+                <option>Blow Dry &amp; Style</option>
+                <option>Makeup Application</option>
               </optgroup>
               <optgroup label="Wellness">
-                <option>Reflexology &mdash; &#8358;16,000</option>
-                <option>Steam Room Session &mdash; &#8358;7,000</option>
-                <option>Couples Massage Package &mdash; &#8358;55,000</option>
+                <option>Reflexology</option>
+                <option>Couples Massage Package</option>
               </optgroup>
             </select>
           </div>
@@ -120,6 +121,15 @@
               <label for="time">Preferred Time <span class="req">*</span></label>
               <select id="time" name="time" required>
                 <option value="" disabled selected>Select a time</option>
+                <option>12:00 AM</option>
+                <option>1:00 AM</option>
+                <option>2:00 AM</option>
+                <option>3:00 AM</option>
+                <option>4:00 AM</option>
+                <option>5:00 AM</option>
+                <option>6:00 AM</option>
+                <option>7:00 AM</option>
+                <option>8:00 AM</option>
                 <option>9:00 AM</option>
                 <option>10:00 AM</option>
                 <option>11:00 AM</option>
@@ -130,6 +140,11 @@
                 <option>4:00 PM</option>
                 <option>5:00 PM</option>
                 <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+                <option>10:00 PM</option>
+                <option>11:00 PM</option>
               </select>
             </div>
           </div>
@@ -171,7 +186,7 @@
           -->
 
           <button type="submit" class="btn btn-gold btn-block submit-btn">Book Now</button>
-          <p class="form-note">You'll be redirected to WhatsApp to confirm your request with us.</p>
+          <p class="form-note">WhatsApp will open automatically with your request ready to send.</p>
         </form>
 
         <!-- ---- CONFIRMATION STATE (hidden until submit) ---- -->
@@ -180,9 +195,9 @@
             <circle class="confirm-circle" cx="32" cy="32" r="29"/>
             <path class="confirm-tick" d="M19 33 L28 42 L46 22"/>
           </svg>
-          <h3>Request ready!</h3>
-          <p>We've put together your appointment request. Continue in WhatsApp to send it to us and get confirmed.</p>
-          <a href="#" id="confirmWhatsappLink" class="btn btn-gold" target="_blank" rel="noopener">Continue on WhatsApp</a>
+          <h3>Request sent!</h3>
+          <p>WhatsApp should have opened in a new tab with your request ready to send. If it didn't open, use the button below.</p>
+          <a href="#" id="confirmWhatsappLink" class="btn btn-gold" target="_blank" rel="noopener">Open WhatsApp</a>
           <button type="button" class="text-link reset-form" id="resetForm">Book another appointment</button>
         </div>
 
@@ -210,11 +225,8 @@
 
         <div class="aside-block">
           <h3>Service Hours</h3>
-          <!-- REPLACE: actual service hours -->
           <ul class="hours-list">
-            <li><span>Tue &ndash; Fri</span><span>9:00 AM &ndash; 7:00 PM</span></li>
-            <li><span>Sat &ndash; Sun</span><span>10:00 AM &ndash; 6:00 PM</span></li>
-            <li><span>Monday</span><span>Closed</span></li>
+            <li><span>Every day</span><span>Open 24 hours</span></li>
           </ul>
         </div>
       </aside>
