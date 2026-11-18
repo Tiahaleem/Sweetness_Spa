@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ``,
         `Name: ${nameEl.value.trim()}`,
         `WhatsApp Number: ${phoneEl.value.trim()}`,
-        `Service: ${serviceEl.value}`,
+        `Service: ${serviceEl.options[serviceEl.selectedIndex].text}`,
         `City: ${cityEl.value}`,
         `Preferred Date: ${dateEl.value}`,
         `Preferred Time: ${timeEl.value}`,
@@ -268,6 +268,22 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById('lpYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- "Book this" on a price card: pre-select the service, jump to the form ---------- */
+  document.querySelectorAll('.lp-book-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const select = document.getElementById('lpService');
+      const formSection = document.getElementById('lp-booking-form');
+      if (form && form.hidden) { form.hidden = false; confirmation.hidden = true; }
+      if (select) {
+        select.value = btn.dataset.service;
+        const wrap = select.closest('.lp-field');
+        if (wrap) wrap.classList.remove('has-error');
+      }
+      trackEvent('price_card_book_clicked', null, null, { service: btn.dataset.service });
+      if (formSection) formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 
   /* ---------- Scroll reveal (same pattern as main site) ---------- */
   const revealTargets = document.querySelectorAll('.reveal-target');
